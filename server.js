@@ -2,9 +2,12 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
+const Tweet = require('.models/tweet');
 
 //Initialize Express
 const app = express ();
+
+const port = process.env.PORT || 3000;
 
 require("dotenv").config()
 
