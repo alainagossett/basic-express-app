@@ -2,7 +2,7 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-const Tweet = require('.models/tweet');
+const Tweet = require('./models/tweet');
 
 //Initialize Express
 const app = express ();
@@ -33,6 +33,10 @@ app.use(express.json())
 app.use(methodOverride("_method"))
 
 //Routes
+
+app.get('/', (req, res) => {
+    res.send("Hello World!");
+})
 
 //Index
 app.get('/tweets', (req, res) => {
